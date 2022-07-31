@@ -1,1 +1,0 @@
-Website 1.0 allows users to go to a website input login and sign up info. After that they are redirected to a yet to be undisclosed page (Account page for the moment). We gather infomation as well in the form of a dictionary. We can then use this data to be inputed into the data base, Mysql.
