@@ -1,0 +1,52 @@
+{% extends 'layouts.html' %}
+{%block contentA%}
+<div class= "container w-50">
+    <form method= "POST" action= "">
+{{form.hidden_tag()}}
+
+<link rel="stylesheet" href="/static/css/user.css">
+
+<img src="/static/images/Default.jpg" class="rounded mx-auto d-block" alt="...">
+
+<h1>Welcome {{user_name}}! </h1>
+{%endblock contentA%}
+{%block contentB%}
+<br>
+<h2>Set an Appointment:</h2>
+<br>
+<div class="form-group">
+    <legend class="border-bottom mb-4">Please select a Lawyer</legend>
+    <select name='lchoices' class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+    <option value="" selected disabled>Please Select Lawyer:</option>
+    <option value="Jose01">Jose Gomez - Real Estate</option>
+    <option value="Richard01">Richard Miller - Estate</option>
+    <option value="Patrick01">Patrick Jung - Small Business</option>
+    <option value="Jennifer01">Jennifer Fernandez - Family</option>
+    </select>
+</div>
+<br>
+<br>
+<br>
+<p> Intial Appointment is:    $100</p>
+<p> To cancel an Appointment within 24 hrs: $25</p>
+<p> Send a message if canceled appointment</p>
+        {{ form.csrt_token}}
+        {{ form.startdate.label }} {{form.startdate(class= 'datepicker')}}  {{form.hidden_tag()}}
+        <br><br><br>
+        <p>
+        {{form.submit(class='btn btn-primary')}}
+        <a href="/email" class="btn btn-primary">Send a Message</a>
+        </p>
+</form>
+<hr>
+<h2>Results for Appointments</h2>
+<h4>{% for your_list_element in appointments_list %}</h4>
+    <p>{{your_list_element}}</p>
+    {% endfor %}
+<br><br><br><br><br>
+<br>
+<br>
+<br>
+
+
+{%endblock contentB%}

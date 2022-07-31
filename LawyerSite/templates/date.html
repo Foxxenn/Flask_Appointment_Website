@@ -1,0 +1,25 @@
+{% extends 'layouts.html' %}
+{%block contentA %}
+<body>
+<h2> Results Dates</h2>
+
+<h4>Start Date: {{session['startdate']}}</h4>
+
+
+<h4> DONT NEED THIS PAGE</h4>
+
+
+</body>
+
+{%endblock contentA %}
+
+
+sqlFormula = "INSERT INTO `Client`(`clientpics`,`clientUserName`, `clientPass`, `clientFName`,  `clientMInt`, `clientLName`, `clientEmail`, `clientAddress`,`clientHomePhone`, `clientCellPhone`) VALUES(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)"
+client1 = ('Default.jpeg', result.get('username'), result.get('confirm_password'),result.get('fname'),'2',result.get('lname'),result.get('email'),'4','5','6')
+mycursor.execute(sqlFormula, client1)
+mydb.commit()
+
+sqlFormula = "INSERT INTO `Appointments`(`idAppointments`,`startTime`,`clientUserName`, `lawyerUserName`) VALUES(%s,%s,%s,%s)"
+
+appoint1=(newappid, )
+mycursor.execute(sqlFormula,)

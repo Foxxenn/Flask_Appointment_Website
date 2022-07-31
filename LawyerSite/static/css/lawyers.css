@@ -1,0 +1,44 @@
+.law-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    position: relative;
+}
+
+.lawyer-box {
+    list-style: none;
+
+    background-color:#accdf2;
+    background-size: cover;
+    position: relative;
+    margin-top: 20px;
+    padding:10px;
+    height: 360px;
+    width: 600px;
+    margin-left:10%;
+}
+
+.lawyer-image {
+    background-size:cover;
+    float: left;
+    width: 200px;
+    height: 275px;
+    margin-top: 30px;
+    border: 5px solid #accdf2;
+    display:block;
+}
+
+h5 {
+    color: #6080a3;
+}
+
+h8 {
+    color:white;
+    display: list-item;
+    margin-bottom: -20px;
+}
+p {
+    color:black;
+    margin-left: 220px;
+    margin-top: 30px;
+    position: absolute;
+}

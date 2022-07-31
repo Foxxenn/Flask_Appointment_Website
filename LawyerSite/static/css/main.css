@@ -1,0 +1,66 @@
+body {
+    background-image: url('/static/images/background.jpg');
+    /* background-position:center;
+    background-repeat: no-repeat;
+    background-size: auto 100%; */
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+/* Lawyer Inquiry Container */
+.card-body { 
+    background-image: url('/static/images/law.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-left: 30%;
+    width: 900px;
+    height: 400px;
+}
+
+.card-body h5{
+    padding: center;
+    color: white;
+}
+
+.card-body p{
+    padding: center;
+    color: white;
+}
+
+
+/* Navbar Links Container */
+.bg-dark {
+    height:fit-content;
+    background-color: #6080a3!important;
+}
+
+.navbar {
+    list-style: none;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+}
+
+.nav-item  {
+    margin: 10px;
+
+}
+
+@media screen and (max-width: 1000px) {
+    .nav-item .btn-primary {
+        display: none;
+    }
+
+}
+
+@media screen and (min-width: 1000px) {
+    .nav-item2 {
+        display: none;
+    }
+
+}

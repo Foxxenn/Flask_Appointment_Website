@@ -1,0 +1,21 @@
+{% extends 'layouts.html' %}
+{%block contentA %}
+<table border = 1>
+    {% for client in userDetails %}
+    <tr>
+        <td>{{client[0]}}</td>
+    </tr>
+    {% endfor %}
+
+</table>
+
+<hr>
+<!-- -->  
+
+{%endblock contentA %}
+
+{%block contentB%}
+
+<h1 style="font-size: 150px;"> TEST PAGE {{name_entered}} </h1>
+
+{%endblock contentB%}

@@ -1,0 +1,30 @@
+{% extends 'layouts.html' %}
+{%block contentA%}
+
+<link rel="stylesheet" href="/static/css/user.css">
+
+
+<div class="container">
+  <!-- Content here -->
+
+<form>
+    <div class="form-group">
+      <label for="exampleFormControlInput1">Email address</label>
+      <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+    </div>
+    <div class="form-group">
+      <label for="exampleFormControlTextarea1">Text</label>
+      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+    </div>
+<br>
+
+    {{form.submit(class='btn btn-primary')}}
+
+<br>
+
+  </form>
+</div>
+
+
+{%endblock contentA%}
+

@@ -1,0 +1,39 @@
+{% extends 'layouts.html' %}
+
+{%block contentA %}
+
+
+
+
+
+<div class="card-body">
+
+    <h5 class="card-title">Everyone has trouble sometimes.</h5>
+    <p class="card-text">At Ace Attorney, we're here to help.</p>
+
+    <a href="{{url_for('staff')}}" class="btn btn-primary">Meet Our Lawyers</a>
+</div>
+
+<!-- <div class= "contentA">
+<div class="card text-center">
+
+    <div class="card-body">
+
+        <h5 class="card-title">Everyone has trouble sometimes.</h5>
+        <p class="card-text">At Ace Attorney, we're here to help.</p>
+
+        <a href="{{url_for('staff')}}" class="btn btn-primary">Meet Our Lawyers</a>
+    </div>
+</div>
+</div> -->
+
+<script src="{{url_for('static', filename='main.js')}}"></script>
+
+{%endblock contentA%}
+
+{%block contentB%}
+
+{%endblock contentB%}
+
+{%block contentC%}
+{%endblock contentC%}

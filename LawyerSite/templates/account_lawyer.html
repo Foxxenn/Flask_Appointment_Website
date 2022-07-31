@@ -1,0 +1,44 @@
+{% extends 'layouts.html' %}
+{%block contentA%}
+<div class= "container w-50">
+    <form method= "POST" action= "">
+{{form.hidden_tag()}}
+<fieldset>
+
+<link rel="stylesheet" href="/static/css/user.css">
+
+
+<img src="/static/images/User1.jpg" class="rounded mx-auto d-block" alt="...">
+
+<h1>Welcome {{user_name}}! </h1>
+<h4>{{cases_won[0]}}</h4>
+<br>
+<h2>Your Appointments: </h2>
+    {{ form.csrt_token}}
+    {{form.hidden_tag()}}
+</form>
+<h4>{% for your_list_element in appointments_list %}</h4>
+    <p>{{your_list_element}}</p>
+    {% endfor %}
+    <br>
+    <div class="form-group">
+        {{form.delete.label(class= "form-control-label")}}
+        {%if form.delete.errors%}
+        {{form.delete(class= "form-control form-control-lg is-invalid")}}
+            {%for error in form.delete.errors%}
+                <span>{{error}}</span>
+            {%endfor%}
+    
+            {%else%}
+            {{form.delete(class= "form-control form-control-lg")}}
+        {%endif%}
+    </div>
+    <br>
+    {{form.submit(class='btn btn-primary')}}
+    <a href="/email" class="btn btn-primary">Send a Message</a>
+
+<br><br><br><br><br><br><br>
+
+
+
+{%endblock contentA%}

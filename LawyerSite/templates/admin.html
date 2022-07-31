@@ -1,0 +1,50 @@
+{% extends 'layouts.html' %}
+{%block contentA%}
+<div class= "container w-50">
+    <form method= "POST" action= "">
+{{form.hidden_tag()}}
+<fieldset>
+
+<link rel="stylesheet" href="/static/css/user.css">
+    
+<img src="/static/images/CatUser.jpg" class="rounded mx-auto d-block" alt="...">
+<h1>Welcome {{user_name}}! </h1>
+<br>
+<div class="form-group">
+    {{form.add.label(class= "form-control-label")}}
+    {%if form.add.errors%}
+    {{form.add(class= "form-control form-control-lg is-invalid")}}
+        {%for error in form.add.errors%}
+            <span>{{error}}</span>
+        {%endfor%}
+
+        {%else%}
+        {{form.add(class= "form-control form-control-lg")}}
+    {%endif%}
+</div>
+<br>
+<div class="form-group">
+    {{form.delete.label(class= "form-control-label")}}
+    {%if form.delete.errors%}
+    {{form.delete(class= "form-control form-control-lg is-invalid")}}
+        {%for error in form.delete.errors%}
+            <span>{{error}}</span>
+        {%endfor%}
+
+        {%else%}
+        {{form.delete(class= "form-control form-control-lg")}}
+    {%endif%}
+</div>
+</fieldset>
+<div class="form-group mt-4"></div>
+    {{form.submit(class='btn btn-primary')}}
+    <a href="/email" class="btn btn-primary">Send a Message</a>
+    <a href="/addl" class="btn btn-primary">Add Lawyer</a>
+    </p>
+</form>
+    <h4>{% for your_list_element in appointments_list %}</h4>
+        <p>{{your_list_element}}</p>
+        {% endfor %}
+</div>  
+
+{%endblock contentA%}

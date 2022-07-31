@@ -1,0 +1,59 @@
+{% extends 'layouts.html' %}
+{%block contentA %}
+<div class= "container w-50">
+    <form method= "POST" action= "">
+{{form.hidden_tag()}}
+<fieldset>
+
+<br><br><br>
+
+<link rel="stylesheet" href="/static/css/user.css">
+
+ 
+<legend class="border-bottom mb-4">Login</legend>
+    <select name='choices' class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+    <option selected>Please Select one:</option>
+    <option value="1">Client</option>
+    <option value="2">Lawyer</option>
+    <option value="3">Senior Partner</option>
+    <option value="4">Adminstration</option>
+    
+    </select>
+
+
+<div class="form-group">
+    {{form.username.label(class= "form-control-label")}}
+    {%if form.username.errors%}
+    {{form.username(class= "form-control form-control-lg is-invalid")}}
+        {%for error in form.username.errors%}
+            <span>{{error}}</span>
+        {%endfor%}
+
+        {%else%}
+        {{form.username(class= "form-control form-control-lg")}}
+    {%endif%}
+</div>
+
+<div class="form-group">
+    {{form.password.label(class= "form-control-label")}}
+    {%if form.password.errors%}
+    {{form.password(class= "form-control form-control-lg is-invalid")}}
+        {%for error in form.password.errors%}
+            <span>{{error}}</span>
+        {%endfor%}
+
+        {%else%}
+        {{form.password(class= "form-control form-control-lg")}}
+    {%endif%}
+</div>
+
+
+</fieldset>
+
+
+<div class="form-group mt-4"></div>
+    {{form.submit(class='btn btn-primary')}}
+    </form>
+</div>
+
+{%endblock contentA %}
