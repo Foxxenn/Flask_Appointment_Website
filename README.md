@@ -1,5 +1,5 @@
 # Flask_Appointment_Website
-A project for school that took a website information that a user entered into MySql.
+A project for my software engineering class that took a website we made for a law firm, and collected information that a user entered into MySql. We made the website accessable to different Lawyers working at the firm, and also for miscl. users.
 
 To run this program you need MySQL to be connected to a server, then input your personal password for MySQL in line 7:
 
